@@ -23,25 +23,26 @@ set linebreak
 
 function! TextMode()
   set wrap
-  " arrow mapping
-  " arrows shouldn't jump over wrapped lines
-  nnoremap <Down> gj
-  nnoremap <Up> gk
-  nnoremap <buffer> <silent> <Home> g<Home>
-  nnoremap <buffer> <silent> <End>  g<End>
-  vnoremap <Down> gj
-  vnoremap <Up> gk
-  vnoremap <buffer> <silent> <Home> g<Home>
-  vnoremap <buffer> <silent> <End>  g<End>
-  inoremap <Down> <C-o>gj
-  inoremap <Up> <C-o>gk
-  inoremap <buffer> <silent> <Home> <C-o>g<Home>
-  inoremap <buffer> <silent> <End> <C-o>g<End>
 endfunction
+
+" arrow mapping
+" arrows shouldn't jump over wrapped lines
+nnoremap <Down> gj
+nnoremap <Up> gk
+nnoremap <buffer> <silent> <Home> g<Home>
+nnoremap <buffer> <silent> <End>  g<End>
+vnoremap <Down> gj
+vnoremap <Up> gk
+vnoremap <buffer> <silent> <Home> g<Home>
+vnoremap <buffer> <silent> <End>  g<End>
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+inoremap <buffer> <silent> <Home> <C-o>g<Home>
+inoremap <buffer> <silent> <End> <C-o>g<End>
 
 function! CodeMode()
   highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-  au BufRead,BufNewFile *.cc,*.h,*.js match OverLength /\%81v.\+/
+  match OverLength /\%81v.\+/
 endfunction
 
 au BufRead,BufNewFile *.cc setfiletype cpp
