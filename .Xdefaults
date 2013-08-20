@@ -36,7 +36,7 @@ urxvt*cursorColor:        #ffcc00
 !is this a login shell?
 urxvt*loginShell:         true
 !set the TERM environment variable
-urxvt*termName:           rxvt-unicode
+urxvt*termName:           rxvt
 !screen dump settings
 urxvt*print-pipe:         cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 !secondary screen scroll (default enabled)
