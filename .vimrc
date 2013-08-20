@@ -1,5 +1,3 @@
-setlocal spell spelllang=en_us
-
 set expandtab
 set shiftwidth=2
 set softtabstop=2
@@ -59,6 +57,10 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+nmap <silent> <A-k> :wincmd k<CR>
+nmap <silent> <A-j> :wincmd j<CR>
+nmap <silent> <A-h> :wincmd h<CR>
+nmap <silent> <A-l> :wincmd l<CR>
 
 nmap <silent> <c-s-k> <C-W>k
 nmap <silent> <c-s-j> <C-W>j
@@ -242,3 +244,13 @@ set guioptions-=m " turn off menu bar
 set guioptions-=T " turn off toolbar
 
 set whichwrap=<,>,h,l,[,]
+
+setlocal spell spelllang=en_us
+hi clear SpellBad
+hi clear SpellCap
+hi clear SpellRare
+hi clear SpellLocal
+hi SpellRare cterm=underline
+hi SpellLocal cterm=underline
+hi SpellBad cterm=underline
+hi SpellCap cterm=underline
