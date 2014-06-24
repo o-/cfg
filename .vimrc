@@ -20,7 +20,7 @@ setlocal nowrap
 set linebreak
 
 function! TextMode()
-  set wrap
+  set wrap linebreak nolist
 endfunction
 
 " arrow mapping
@@ -44,7 +44,7 @@ function! CodeMode()
 endfunction
 
 au BufRead,BufNewFile *.cc setfiletype cpp
-au FileType javascript,c,c++,ruby,python,c,cpp,java,puppet call CodeMode()
+au FileType javascript,c,c++,ruby,python,c,cpp,java,puppet,html,js,css,go call CodeMode()
 au FileType tex call TextMode()
 
 function! UpdateTags()

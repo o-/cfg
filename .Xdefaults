@@ -11,8 +11,8 @@ Xft.rgba:       rgb
 
 ! font preference
 !URxvt*font: xft:Bitstream Vera Sans Mono-10
-URxvt*font: xft:Ubuntu Mono:pixelsize=16
-URxvt*boldFont: xft:Ubuntu Mono:bold:pixelsize=16
+URxvt*font: xft:Ubuntu Mono:pixelsize=15
+URxvt*boldFont: xft:Ubuntu Mono:bold:pixelsize=15
 !initial size
 urxvt*geometry:           120x35
 !internal whitespace
